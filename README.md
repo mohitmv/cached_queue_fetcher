@@ -1,7 +1,9 @@
 ## CachedQueueFetcher
 
 CachedQueueFetcher is a very light weight wrapper, used for dequeing a FIFO
-in a smarter way.
+in a smarter way. CachedQueueFetcher can be used for dealing with streaming
+algorithms (online algorithms) as well by interpreting the incoming values
+like dequeing a queue.
 
 ### The Problem
 
@@ -52,6 +54,11 @@ assert(c_fetcher.Get(-2) == x9);
 assert(c_fetcher.Get(-3) == x8);
 
 ```
+
+Note: CachedQueueFetcher is implemented in C as well. Checkout
+`cached_queue_fetcher_c_test.cpp` to learn about interface of its C
+implementation.
+
 
 ### Cache overflow
 
